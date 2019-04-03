@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: callme-service
+  cloud:
+    consul:
+      host: 192.168.99.100

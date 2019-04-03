@@ -1,0 +1,19 @@
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: caller-service
+          uri: lb://caller-service
+          predicates:
+            - Path=/caller/**
+          filters:
+            - RewritePath=/caller/(?<path>.*), /$\{path}
+        - id: callme-service
+          uri: lb://callme-service
+          predicates:
+            - Path=/callme/**
+          filters:
+            - RewritePath=/callme/(?<path>.*), /$\{path}
