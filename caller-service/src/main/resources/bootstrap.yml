@@ -5,5 +5,5 @@ spring:
     consul:
       host: 192.168.99.100
       discovery:
-        ip-address: 192.168.99.1
-        prefer-ip-address: true
+        hostname: localhost
+        register-health-check: false

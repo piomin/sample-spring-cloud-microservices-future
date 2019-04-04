@@ -6,3 +6,5 @@ spring:
       host: 192.168.99.100
       config:
         format: YAML
+      discovery:
+        register-health-check: false
