@@ -19,9 +19,4 @@ public class CallerApplication {
 		return new RestTemplate();
 	}
 
-//	@Bean
-//	@Primary
-//	public BlockingLoadBalancerClient loadBalancer(LoadBalancerClientFactory factory) {
-//		return new BlockingLoadBalancerClient(factory);
-//	}
 }

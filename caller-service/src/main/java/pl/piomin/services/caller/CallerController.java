@@ -30,4 +30,12 @@ public class CallerController {
 				+ " calling-> " + callmeResponse;
 	}
 
+	@GetMapping("/slow")
+	public String slow() {
+		String url = "http://callme-service/callme/slow";
+		String callmeResponse = template.getForObject(url, String.class);
+		LOGGER.info("Response: {}", callmeResponse);
+		return "I'm Caller running on port " + environment.getProperty("local.server.port")
+				+ " calling-> " + callmeResponse;
+	}
 }

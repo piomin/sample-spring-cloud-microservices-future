@@ -18,4 +18,14 @@ public class CallmeController {
         return "I'm Callme running on port " + environment.getProperty("local.server.port");
     }
 
+    @GetMapping("/slow")
+    public String slow() {
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+
+        }
+        return "I'm Slow Callme running on port " + environment.getProperty("local.server.port");
+    }
+
 }
