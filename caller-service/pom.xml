@@ -59,6 +59,12 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
+		<dependency>
+			<groupId>io.specto</groupId>
+			<artifactId>hoverfly-java-junit5</artifactId>
+			<version>0.14.3</version>
+			<scope>test</scope>
+		</dependency>
 	</dependencies>
 
 	<build>
