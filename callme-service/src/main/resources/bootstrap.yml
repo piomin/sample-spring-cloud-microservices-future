@@ -7,3 +7,5 @@ spring:
       discovery:
         hostname: localhost
         register-health-check: false
+  config:
+    import: optional:consul:localhost:8500
