@@ -14,28 +14,28 @@ import org.springframework.web.client.RestTemplate;
 @RequestMapping("/caller")
 public class CallerController {
 
-	private static final Logger LOGGER = LoggerFactory.getLogger(CallerController.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(CallerController.class);
 
-	@Autowired
-	Environment environment;
-	@Autowired
-	RestTemplate template;
+    @Autowired
+    Environment environment;
+    @Autowired
+    RestTemplate template;
 
-	@GetMapping
-	public String call() {
-		String url = "http://callme-service/callme";
-		String callmeResponse = template.getForObject(url, String.class);
-		LOGGER.info("Response: {}", callmeResponse);
-		return "I'm Caller running on port " + environment.getProperty("local.server.port")
-				+ " calling-> " + callmeResponse;
-	}
+    @GetMapping
+    public String call() {
+        String url = "http://callme-service/callme";
+        String callmeResponse = template.getForObject(url, String.class);
+        LOGGER.info("Response: {}", callmeResponse);
+        return "I'm Caller running on port " + environment.getProperty("local.server.port")
+                + " calling-> " + callmeResponse;
+    }
 
-	@GetMapping("/slow")
-	public String slow() {
-		String url = "http://callme-service/callme/slow";
-		String callmeResponse = template.getForObject(url, String.class);
-		LOGGER.info("Response: {}", callmeResponse);
-		return "I'm Caller running on port " + environment.getProperty("local.server.port")
-				+ " calling-> " + callmeResponse;
-	}
+    @GetMapping("/slow")
+    public String slow() {
+        String url = "http://callme-service/callme/slow";
+        String callmeResponse = template.getForObject(url, String.class);
+        LOGGER.info("Response: {}", callmeResponse);
+        return "I'm Caller running on port " + environment.getProperty("local.server.port")
+                + " calling-> " + callmeResponse;
+    }
 }

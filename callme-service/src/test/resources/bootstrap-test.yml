@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: callme-service
+  cloud:
+    consul:
+      discovery:
+        enabled: false
+  config:
+    import: optional:consul:localhost:8500
+
+#spring.cloud.consul.discovery.enabled: false
+#spring.cloud.consul.config.enabled: false
+#spring.cloud.consul.discovery.catalogServicesWatch.enabled: false

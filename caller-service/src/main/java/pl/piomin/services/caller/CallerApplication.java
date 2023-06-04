@@ -9,14 +9,14 @@ import org.springframework.web.client.RestTemplate;
 @SpringBootApplication
 public class CallerApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(CallerApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(CallerApplication.class, args);
+    }
 
-	@LoadBalanced
-	@Bean
-	RestTemplate template() {
-		return new RestTemplate();
-	}
+    @LoadBalanced
+    @Bean
+    RestTemplate template() {
+        return new RestTemplate();
+    }
 
 }
