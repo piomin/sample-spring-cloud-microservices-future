@@ -19,16 +19,6 @@
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-consul-discovery</artifactId>
-            <!--			<exclusions>-->
-            <!--				<exclusion>-->
-            <!--					<groupId>org.springframework.cloud</groupId>-->
-            <!--					<artifactId>spring-cloud-netflix-hystrix</artifactId>-->
-            <!--				</exclusion>-->
-            <!--				<exclusion>-->
-            <!--					<groupId>org.springframework.cloud</groupId>-->
-            <!--					<artifactId>spring-cloud-starter-netflix-ribbon</artifactId>-->
-            <!--				</exclusion>-->
-            <!--			</exclusions>-->
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
@@ -36,12 +26,8 @@
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-gateway</artifactId>
+            <artifactId>spring-cloud-starter-gateway-server-webflux</artifactId>
         </dependency>
-        <!--		<dependency>-->
-        <!--			<groupId>org.springframework.cloud</groupId>-->
-        <!--			<artifactId>spring-cloud-loadbalancer</artifactId>-->
-        <!--		</dependency>-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>

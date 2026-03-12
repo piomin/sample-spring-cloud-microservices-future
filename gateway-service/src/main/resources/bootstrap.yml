@@ -9,8 +9,4 @@ spring:
       discovery:
         register-health-check: false
 
-    loadbalancer:
-      ribbon:
-        enabled: false
-
 server.port: 8080
