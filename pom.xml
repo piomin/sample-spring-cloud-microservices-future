@@ -17,7 +17,7 @@
     <packaging>pom</packaging>
 
     <properties>
-        <sonar.projectKey>piomin_spring-cloud-microservices-future</sonar.projectKey>
+        <sonar.projectKey>piomin_sample_spring-cloud-microservices-future</sonar.projectKey>
         <sonar.organization>piomin</sonar.organization>
         <sonar.host.url>https://sonarcloud.io</sonar.host.url>
         <java.version>21</java.version>
